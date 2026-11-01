@@ -18,6 +18,6 @@ UIA의 `fill`·`send`는 직전 `inspect`의 ID·ref, UTF-8 `--message-file`, �
 
 읽기는 `visible_accessibility_only`입니다. 렌더링된 접근성 텍스트만 읽으며 전체 과거 대화를 읽었다고 하지 않습니다. 접근성 미지원 앱은 REA로 해당 앱 전용 어댑터를 추가해야 합니다. 충북 이외 지역에 충북 계정이나 CDP 세션을 대신 연결하지 않습니다.
 
-전북 JB메신저 이름과 설치 경로는 [전북교육포털 안내](https://www.jbedu.kr/board/view.jbedu?boardId=BBS_0000073&dataSid=1905197&paging=ok&startPage=60), 인천 아이스톡은 [인천학교지원서비스](https://edus.ice.go.kr/isupport/search.do?dateAll=Y&pageUnit=10&q=%EC%95%84%EC%9D%B4%EC%8A%A4%ED%86%A1&searchCnd=all&sort=accuracy&target=all)에서 확인했습니다. 다른 지역 프로그램의 이름과 버전은 실제 설치물 분석 전까지 확정하지 않습니다.
+교육청·공식 공급사에서 확인한 지역별 제품 이름과 출처, 경기·제주 공식 설치물의 서명·해시는 `regions.json`에 기록합니다. [확인 범위](ANALYSIS.md)에서 설치물 관찰과 실제 동작 검증을 구분합니다. 확인하지 못한 제품의 이름·버전·실제 동작은 확정하지 않습니다.
 
 개인 쪽지·연락처·캡처·인증정보는 공개 저장소에 넣지 않습니다. 기본 작업 자료는 `D:\Codex\narae-data\messengers`에 저장합니다. CBE 원본은 MIT 라이선스이며 `vendor/cbe`에 보존합니다.

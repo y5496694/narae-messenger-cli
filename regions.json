@@ -13,7 +13,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "서울 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "pen",
@@ -28,8 +30,13 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "부산 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "펜메신저",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://note.pen.go.kr/main/uOrg/read/G0000133/1183"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "dge",
@@ -45,7 +52,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "대구 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "ice",
@@ -61,7 +70,12 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "아이스톡",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerSources": [
+      "https://ict114.ice.go.kr/upload/ucare/kms/f52427cf5fb74f3fa29f464120bf3522.pdf"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "gen",
@@ -77,7 +91,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "광주 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "dje",
@@ -93,7 +109,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "대전 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "use",
@@ -109,7 +127,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "울산 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "sje",
@@ -125,7 +145,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "세종 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "goe",
@@ -141,8 +163,22 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "경기 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "GOE메신저",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://www.goe.go.kr/resource/old/BBSMSTR_000000030111/BBS_202404010322151180.pdf",
+      "https://ultari.co.kr/goe/"
+    ],
+    "installer": {
+      "sha256": "7346bc46adb720420a3cd684cdaf09c996267ea90b0469973fc2cc78688fe7eb",
+      "product": "GOE메신저",
+      "publisher": "ULTARI",
+      "fileVersion": "7.0.2",
+      "signature": "valid",
+      "runtimeTested": false
+    },
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "kwe",
@@ -157,8 +193,13 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "강원 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "이음 EUM",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=48393&key=m2307211199274"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "cbe",
@@ -175,7 +216,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": true,
     "messenger": "충북소통메신저",
-    "adapter": "cbe"
+    "adapter": "cbe",
+    "messengerIdentityChecked": true,
+    "support": "dedicated-cli-live-connected"
   },
   {
     "id": "cne",
@@ -191,7 +234,9 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "충남 교직원 메신저",
-    "adapter": "uia"
+    "adapter": "uia",
+    "messengerIdentityChecked": false,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "jbe",
@@ -206,8 +251,13 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "JB메신저",
-    "adapter": "uia"
+    "messenger": "JBEdu Messenger+",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://it.jbe.go.kr/board/view.jbe?boardId=BBS_0000011&dataSid=6230&menuCd=DOM_000000105006002000&paging=ok&startPage=1"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "jne",
@@ -222,8 +272,13 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "전남 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "전남메신저",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://www.jne.go.kr/main/jo/jobshare/selectJobShareView.do?deptCd=R&mi=261"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "gbe",
@@ -238,8 +293,14 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "경북 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "GBeeTalk 지비톡",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://www.gbe.kr/us/na/ntt/selectNttList.do?bbsId=2508&mi=6355",
+      "https://www.gbe.kr/main/na/ntt/selectNttInfo.do?mi=9120&nttSn=1608809"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "gne",
@@ -254,8 +315,13 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "경남 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "아이좋아 메신저",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://hyedu.gne.go.kr/hyedu/na/ntt/selectNttInfo.do?nttSn=2509524"
+    ],
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   },
   {
     "id": "jje",
@@ -270,7 +336,20 @@
     ],
     "addressChecked": "2026-11-01",
     "liveTested": false,
-    "messenger": "제주 교직원 메신저",
-    "adapter": "uia"
+    "messenger": "제주특별자치도교육청 메신저",
+    "adapter": "uia",
+    "messengerSources": [
+      "https://www.jje.go.kr/index.jje?menuCd=DOM_000000109003000000"
+    ],
+    "installer": {
+      "sha256": "cd0c54e7907040f0381fad2e2d11139127fb13df0404e518d7a9ee59d862c017",
+      "product": "제주특별자치도교육청 메신저",
+      "publisher": "UCWARE Inc",
+      "fileVersion": "746",
+      "signature": "valid",
+      "runtimeTested": false
+    },
+    "messengerIdentityChecked": true,
+    "support": "observed-uia-unverified"
   }
 ]
