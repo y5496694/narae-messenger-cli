@@ -1,0 +1,5 @@
+data/
+captures/
+*.log
+*.clixml
+node_modules/
