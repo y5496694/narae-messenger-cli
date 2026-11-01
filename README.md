@@ -1,23 +1,33 @@
-# 나래 지역 메신저 CLI 0.1
+# 나래 지역 메신저 CLI 0.2
 
-17개 교육청의 지역 선택과 앱 연결을 분리합니다. **충북은 기존 CBE CLI의 전용 어댑터를 포함합니다.** 다른 지역은 실제 설치 앱을 바인딩하는 Windows UI Automation 공통 어댑터입니다. 전용 통신 프로토콜 17종을 구현·실검증했다는 뜻이 아닙니다. 현재 실제 업무 시험은 충북만 합니다.
+충북 CBE, ULTARI AtMessenger7, UCWARE Delphi를 별도 드라이버로 처리합니다. 경기·경북·전북·강원·경남·제주 공식 설치물을 실제 설치하고 REA로 분석했습니다. 각 제품의 설정과 실행 파일 SHA-256을 함께 확인합니다.
+
+| 지역 | 실제 제품·업체 | 전용 조회 |
+| --- | --- | --- |
+| 충북 | 기존 CBE CLI | 기존 연결·쪽지·사용자·첨부 명령 |
+| 경기·경북·전북 | GOE·GBeeTALK·JBEdu Messenger+ / ULTARI | 로컬 쪽지·대화방·대화 행 |
+| 강원·경남·제주 | 이음·아이좋아·제주교육청 메신저 / UCWARE | 로컬 쪽지·보관 대화·개인 주소록 |
+
+비충북 조회는 사용자 제공 표준 SQLite 캐시를 읽습니다. 새 설치에는 계정 캐시가 없습니다. 지역별 로그인·서버 검색·전송·원격 첨부 다운로드는 아직 실검증하지 못했습니다. 다른 10개 지역은 전용 구현이 없습니다. [확인 범위](ANALYSIS.md)를 확인하세요.
+
+Node 22.19 이상이 필요합니다. 기본 설치 경로는 D:/Codex/apps/regional-messengers/제품ID, 작업 자료는 D:/Codex/narae-data/messengers입니다. 다른 설치 경로는 매 명령에 --install-dir로 지정합니다.
 
 ```powershell
-node cli.mjs --region 충북 status
+node cli.mjs --region 경기 status
+node cli.mjs --region 경기 accounts --kind notes --database 'D:/Codex/work/GOE캐시.db'
+node cli.mjs --region 경기 bind-store --kind notes --database 'D:/Codex/work/GOE캐시.db' --owner '실제캐시계정'
+node cli.mjs --region 경기 notes --query '연수' --limit 20
+node cli.mjs --region 경기 note --id '실제쪽지키'
+node cli.mjs --region 제주 accounts --kind contacts --database 'D:/Codex/work/user_data.db'
+node cli.mjs --region 제주 bind-store --kind contacts --database 'D:/Codex/work/user_data.db' --owner '실제캐시계정'
+node cli.mjs --region 제주 contacts --query '교사이름'
 node cli.mjs --region 충북 cbe notes list --box received --json
-node cli.mjs --region 전북 status
-node cli.mjs --region 전북 bind --pid 실제프로세스 --hwnd 실제창핸들
-node cli.mjs --region 전북 inspect
-node cli.mjs --region 전북 read --snapshot 실제조회ID --ref 실제항목
-node cli.mjs --region 전북 analyze --path '실제 설치 폴더' --output 'D:\Codex\tmp\새근거.json'
 ```
 
-`analyze`는 [REA](https://github.com/morluto/rea)의 `inspect-desktop-application`으로 설치물의 실제 런타임 근거를 저장합니다. REA는 별도 설치가 필요합니다. 실행 파일·접근성 트리와 실제 로그인 계정이 없는 지역의 읽기·전송 성공을 주장하지 않습니다.
+status.localKinds에 있는 종류만 연결합니다. 조회는 연결한 정확한 지역·DB 경로·계정으로 한정합니다. 같은 키로 여러 기록이 있으면 임의 선택하지 않습니다. 제품·실행 파일·스키마가 바뀌면 재분석이 필요합니다. DB 읽기 전용 트랜잭션을 사용하며 읽음 표시를 갱신하지 않습니다. 바이너리 서식 본문을 해독하지 못하면 opaque-binary와 해시를 반환합니다. 첨부 필드는 원래 메타데이터이며 다운로드 결과가 아닙니다.
 
-UIA의 `fill`·`send`는 직전 `inspect`의 ID·ref, UTF-8 `--message-file`, 명시적 `--yes`가 필요합니다. 기존 입력이 비어 있어야 하며, `send`에는 실제 전송 버튼 `--button`과 전체 대화방 제목 `--expect-title`도 필요합니다. 프로세스·실행 파일 해시·창·표시 내용이 달라지면 변경하지 않습니다. 같은 조회 ID의 변경은 한 번만 시도합니다. 전송 후에는 `submitted_unconfirmed`이며 서버 수신 확인이 아닙니다. 타임아웃 뒤 자동 재전송하지 않습니다.
+[제품별 프로필](drivers/profiles.json)에는 여섯 설치물의 해시·REA 근거 ID·실제 테이블 열과 바이트 위치가 있습니다. research/rebuild-profiles.py는 설치물과 REA 근거 해시를 대조하여 재생성합니다. analyze 명령의 디렉터리 헤더 관찰만으로 내부 프로토콜 분석이 끝났다고 하지 않습니다.
 
-읽기는 `visible_accessibility_only`입니다. 렌더링된 접근성 텍스트만 읽으며 전체 과거 대화를 읽었다고 하지 않습니다. 접근성 미지원 앱은 REA로 해당 앱 전용 어댑터를 추가해야 합니다. 충북 이외 지역에 충북 계정이나 CDP 세션을 대신 연결하지 않습니다.
+UIA discover/bind/inspect/read/fill/send는 별도의 수동 관찰 수단입니다. 실제 snapshot/ref, 비어 있는 편집 항목, 문안 파일과 --yes를 사용합니다. send에는 전송 버튼 ref와 방 전체 제목이 필요하며 결과는 submitted_unconfirmed입니다. 결과 불명 전송은 재시도하지 않습니다. 전용 제품은 UIA에서도 제품 설정과 해시를 확인합니다.
 
-교육청·공식 공급사에서 확인한 지역별 제품 이름과 출처, 경기·제주 공식 설치물의 서명·해시는 `regions.json`에 기록합니다. [확인 범위](ANALYSIS.md)에서 설치물 관찰과 실제 동작 검증을 구분합니다. 확인하지 못한 제품의 이름·버전·실제 동작은 확정하지 않습니다.
-
-개인 쪽지·연락처·캡처·인증정보는 공개 저장소에 넣지 않습니다. 기본 작업 자료는 `D:\Codex\narae-data\messengers`에 저장합니다. CBE 원본은 MIT 라이선스이며 `vendor/cbe`에 보존합니다.
+설치기·공급사 실행 파일·PDB·쪽지·연락처·인증정보는 배포하지 않습니다. CBE 원본 MIT 라이선스는 vendor/cbe에 보존합니다. npm test는 합성 캐시 회귀 검증이며 비충북 실계정 시험이 아닙니다.

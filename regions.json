@@ -15,7 +15,7 @@
     "messenger": "서울 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "pen",
@@ -36,7 +36,7 @@
       "https://note.pen.go.kr/main/uOrg/read/G0000133/1183"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "dge",
@@ -54,7 +54,7 @@
     "messenger": "대구 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "ice",
@@ -75,7 +75,7 @@
       "https://ict114.ice.go.kr/upload/ucare/kms/f52427cf5fb74f3fa29f464120bf3522.pdf"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "gen",
@@ -93,7 +93,7 @@
     "messenger": "광주 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "dje",
@@ -111,7 +111,7 @@
     "messenger": "대전 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "use",
@@ -129,7 +129,7 @@
     "messenger": "울산 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "sje",
@@ -147,7 +147,7 @@
     "messenger": "세종 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "goe",
@@ -164,10 +164,11 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "GOE메신저",
-    "adapter": "uia",
+    "adapter": "ultari-atmessenger7",
     "messengerSources": [
       "https://www.goe.go.kr/resource/old/BBSMSTR_000000030111/BBS_202404010322151180.pdf",
-      "https://ultari.co.kr/goe/"
+      "https://ultari.co.kr/goe/",
+      "https://ultari.co.kr/goe/file/AtMessenger7Enable_Banner_Setup.exe"
     ],
     "installer": {
       "sha256": "7346bc46adb720420a3cd684cdaf09c996267ea90b0469973fc2cc78688fe7eb",
@@ -178,7 +179,14 @@
       "runtimeTested": false
     },
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-local-cache-static-verified",
+    "installedArtifact": {
+      "sha256": "b631b4db84371036666fdc3ffa63389e1df1d3dcfdeaf626fbd620ad1783421d",
+      "executable": "AtMessengerMobileEdition.exe",
+      "reaEvidence": "ev_63b4e77aa332c8a915ca6c9f9a4f066f6ed9579d86e96e2ec36e0000bb615680",
+      "runtimeVerified": false,
+      "authenticatedLiveTested": false
+    }
   },
   {
     "id": "kwe",
@@ -194,12 +202,20 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "이음 EUM",
-    "adapter": "uia",
+    "adapter": "ucware-delphi",
     "messengerSources": [
-      "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=48393&key=m2307211199274"
+      "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=48393&key=m2307211199274",
+      "https://www.gwe.go.kr/main/bbs/view.do?bbsSn=53811&key=bTIzMDcyMTExOTkyNzQ%3D"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-local-cache-static-verified",
+    "installedArtifact": {
+      "sha256": "a0c7849d288a98b44a0c1d423b4d47abd738a33a5e3fcebc150efa4e737f24bf",
+      "executable": "ucware_m.exe",
+      "reaEvidence": "ev_ec4ca322c4f182f308a790172d3484179d9f6332ad72e6c738903f894f9de672",
+      "runtimeVerified": false,
+      "authenticatedLiveTested": false
+    }
   },
   {
     "id": "cbe",
@@ -236,7 +252,7 @@
     "messenger": "충남 교직원 메신저",
     "adapter": "uia",
     "messengerIdentityChecked": false,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "jbe",
@@ -252,12 +268,20 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "JBEdu Messenger+",
-    "adapter": "uia",
+    "adapter": "ultari-atmessenger7",
     "messengerSources": [
-      "https://it.jbe.go.kr/board/view.jbe?boardId=BBS_0000011&dataSid=6230&menuCd=DOM_000000105006002000&paging=ok&startPage=1"
+      "https://it.jbe.go.kr/board/view.jbe?boardId=BBS_0000011&dataSid=6230&menuCd=DOM_000000105006002000&paging=ok&startPage=1",
+      "https://www.jbedu.kr/index.jbedu?menuCd=DOM_000000513001000000"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-local-cache-static-verified",
+    "installedArtifact": {
+      "sha256": "c3789580af186d298fd0b2a0dc83314171e45fb16d0d7bbbedfb885a75f11e8d",
+      "executable": "AtMessengerMobileEdition.exe",
+      "reaEvidence": "ev_35231ea2759f274dbaf1f7dc65a51f60b10cb8b5f830d6ca9b980e69f264ae21",
+      "runtimeVerified": false,
+      "authenticatedLiveTested": false
+    }
   },
   {
     "id": "jne",
@@ -278,7 +302,7 @@
       "https://www.jne.go.kr/main/jo/jobshare/selectJobShareView.do?deptCd=R&mi=261"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-driver-pending"
   },
   {
     "id": "gbe",
@@ -294,13 +318,21 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "GBeeTalk 지비톡",
-    "adapter": "uia",
+    "adapter": "ultari-atmessenger7",
     "messengerSources": [
       "https://www.gbe.kr/us/na/ntt/selectNttList.do?bbsId=2508&mi=6355",
-      "https://www.gbe.kr/main/na/ntt/selectNttInfo.do?mi=9120&nttSn=1608809"
+      "https://www.gbe.kr/main/na/ntt/selectNttInfo.do?mi=9120&nttSn=1608809",
+      "https://www.gbe.kr/us/na/ntt/selectNttInfo.do?mi=6355&bbsId=2508&nttSn=1370718"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-local-cache-static-verified",
+    "installedArtifact": {
+      "sha256": "3b706b5a7def5f3fcc01af3ae07d64228f13fdbb4fde1699d74cb6ef584e26e2",
+      "executable": "AtMessengerMobileEdition.exe",
+      "reaEvidence": "ev_990950dc3b162b6f71586cebdc2f544dea98a621f07b4f61a116e09d5e807622",
+      "runtimeVerified": false,
+      "authenticatedLiveTested": false
+    }
   },
   {
     "id": "gne",
@@ -316,12 +348,19 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "아이좋아 메신저",
-    "adapter": "uia",
+    "adapter": "ucware-delphi",
     "messengerSources": [
       "https://hyedu.gne.go.kr/hyedu/na/ntt/selectNttInfo.do?nttSn=2509524"
     ],
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-local-cache-static-verified",
+    "installedArtifact": {
+      "sha256": "569533a285c5e5496b8304fc64fb0fec03014af8d85f2453541acfcc6dc7315c",
+      "executable": "ucware_m.exe",
+      "reaEvidence": "ev_a1a1c1a95b69021252c05cb9442df5fe7fbae546bee4b4a4539ce4e0ea13e351",
+      "runtimeVerified": false,
+      "authenticatedLiveTested": false
+    }
   },
   {
     "id": "jje",
@@ -337,7 +376,7 @@
     "addressChecked": "2026-11-01",
     "liveTested": false,
     "messenger": "제주특별자치도교육청 메신저",
-    "adapter": "uia",
+    "adapter": "ucware-delphi",
     "messengerSources": [
       "https://www.jje.go.kr/index.jje?menuCd=DOM_000000109003000000"
     ],
@@ -350,6 +389,13 @@
       "runtimeTested": false
     },
     "messengerIdentityChecked": true,
-    "support": "observed-uia-unverified"
+    "support": "dedicated-local-cache-static-verified",
+    "installedArtifact": {
+      "sha256": "1284f620f4da3adeba3a78034f54dddb4e18a05ec71769a6dc8375db12f21294",
+      "executable": "ucware_m.exe",
+      "reaEvidence": "ev_3e7378cedbc8447a04304ac4c1456f0400bbcfccfb0967bde4197b1be348e61b",
+      "runtimeVerified": false,
+      "authenticatedLiveTested": false
+    }
   }
 ]
