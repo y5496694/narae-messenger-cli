@@ -31,3 +31,15 @@ status.localKinds에 있는 종류만 연결합니다. 조회는 연결한 정�
 UIA discover/bind/inspect/read/fill/send는 별도의 수동 관찰 수단입니다. 실제 snapshot/ref, 비어 있는 편집 항목, 문안 파일과 --yes를 사용합니다. send에는 전송 버튼 ref와 방 전체 제목이 필요하며 결과는 submitted_unconfirmed입니다. 결과 불명 전송은 재시도하지 않습니다. 전용 제품은 UIA에서도 제품 설정과 해시를 확인합니다.
 
 설치기·공급사 실행 파일·PDB·쪽지·연락처·인증정보는 배포하지 않습니다. CBE 원본 MIT 라이선스는 vendor/cbe에 보존합니다. npm test는 합성 캐시 회귀 검증이며 비충북 실계정 시험이 아닙니다.
+
+
+## 제품별 CLI와 스킬
+
+| 지역 | CLI·스킬 저장소 |
+|---|---|
+| 경기 | https://github.com/y5496694/goe-messenger-cli |
+| 경북 | https://github.com/y5496694/gbeetalk-cli |
+| 전북 | https://github.com/y5496694/jbedu-messenger-cli |
+| 강원 | https://github.com/y5496694/eum-messenger-cli |
+| 경남 | https://github.com/y5496694/ijoa-messenger-cli |
+| 제주 | https://github.com/y5496694/jeju-education-messenger-cli |
